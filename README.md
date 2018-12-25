@@ -36,11 +36,11 @@ ruby OnlineAccessment5hours.rb
 ```
 inbound,tcp,80,192.168.1.2
 ```
-2. Range of port and signal IP address with direction and protocol:
+2. Range of ports and signal IP address with direction and protocol:
 ```
 outbound,tcp,10000-20000,192.168.10.11
 ```
-3. Range of port and Range of IP address with direction and protocol:
+3. Range of ports and Range of IP address with direction and protocol:
 ```
 outbound,tcp,2100-3000,192.168.15.0-192.168.16.3
 ```
@@ -53,7 +53,7 @@ outbound,tcp,2100-3000,192.168.15.0-192.168.16.3
 ### Algorithmic choices
 This Online assessment is implemented with Rudy script. Since the requirements for this assessment is reducing the latency of response for Firewall. 
 ### IP address part
-I choose the Trie structure to store information of each rule. Although this selection will increase memory cost after applying rules, the cost of each query is faster than the others data structure. The algorithm will quickly respond when the node does not exist or the value in node does not match with input. Typically, it will take O (1) to check each connection.
+I choose the Trie structure to store information of each rule. Although this selection will increase memory cost after applying rules, the cost of each query is faster than the others data structure. The algorithm will quickly respond when the node does not exist or the value in node does not match with input. Typically, it will take O(1) to check each connection.
 ### Port part:
 To reduce memory cost, I utilize the Interval class to record the range of port. When the ranges of ports is overlapped, it will merge the ranges of ports as a new Interval class. Otherwise, it stores Interval class directly. For port searching, I majorly depend on the BinarySeaching for the Interval class in a list.
 ### Direction and protocol;
