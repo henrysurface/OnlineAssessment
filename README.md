@@ -11,7 +11,7 @@ Please clone and download this repo to your computer.
 1. Please install ruby with following link:
 https://www.ruby-lang.org/en/documentation/installation/
 
-2. Open OnlineAccessment90min.rb and change "your path file" to the testing files in your computer.
+2. Open OnlineAccessment90min.rb and OnlineAccessment5hours.rb. Change "your path file" to the testing files in your computer.
 ```
 fw = Firewall.new("your path file")
 ```
